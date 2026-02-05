@@ -32,7 +32,7 @@ async def on_member_remove(member):
                         description = f"| ⩇⩇・Good luck with the path you've chosen, {member.mention}!",
                         color = 0xec407a )
     emmbed.set_image(url="https://media.tenor.com/_YgGGcfe-3IAAAAM/chrollo-lucilfer-chrollo-hxh.gif")
-   await channel.send(embed=emmbed)
+    await channel.send(embed=emmbed)
 
 @bot.event
 async def on_message(message):
@@ -48,6 +48,7 @@ async def hellocommand(interaction):
 server_on()
 
 bot.run(os.getenv('TOKEN'))
+
 
 
 
