@@ -16,19 +16,23 @@ async def on_ready():
 async def on_member_join(member):
     channel = bot.get_channel(1375858712731844699)
 
-    emmbed = discord.Embed(title = 'Welcome to the Phantom Troupe!' ,                     
+    emmbed = discord.Embed(title = ' ‎ ꕁ・Welcome to the Phantom Troupe! ‎ ꕁ・' ,                     
                         description = f"| ⩇⩇・Hi new members, {member.mention}!",
+                        description = f"| ⩇⩇・nice to meet u",
                         color = 0xec407a )
     emmbed.set_image(url="https://media.tenor.com/_YgGGcfe-3IAAAAM/chrollo-lucilfer-chrollo-hxh.gif")
 
-    await channel.send(content=text, embed=emmbed)
+    await channel.send(embed=emmbed)
     #await member.send(text)
 
 @bot.event
 async def on_member_remove(member):
-    channel = bot.get_channel(1375858712731844699)
-    text = f"{member.mention} Ba Bye My Bro!"
-    await channel.send(text)
+    channel = bot.get_channel(1468880194352709768)
+    emmbed = discord.Embed(title = 'Ba Bye!' ,                     
+                        description = f"| ⩇⩇・Good luck with the path you've chosen, {member.mention}!",
+                        color = 0xec407a )
+    emmbed.set_image(url="https://media.tenor.com/_YgGGcfe-3IAAAAM/chrollo-lucilfer-chrollo-hxh.gif")
+   await channel.send(embed=emmbed)
 
 @bot.event
 async def on_message(message):
@@ -44,3 +48,4 @@ async def hellocommand(interaction):
 server_on()
 
 bot.run(os.getenv('TOKEN'))
+
