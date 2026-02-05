@@ -17,8 +17,8 @@ async def on_member_join(member):
     channel = bot.get_channel(1375858712731844699)
 
     emmbed = discord.Embed(title = ' ‎ ꕁ・Welcome to the Phantom Troupe! ‎ ꕁ・' ,                     
-                        description = f"| ⩇⩇・Hi new members, {member.mention}!",
-                        description = f"| ⩇⩇・nice to meet u",
+                        description = f"| ⩇⩇・Hi new members, {member.mention}/n"
+                                      f"| ⩇⩇・nice to meet u",
                         color = 0xec407a )
     emmbed.set_image(url="https://media.tenor.com/_YgGGcfe-3IAAAAM/chrollo-lucilfer-chrollo-hxh.gif")
 
@@ -48,4 +48,5 @@ async def hellocommand(interaction):
 server_on()
 
 bot.run(os.getenv('TOKEN'))
+
 
