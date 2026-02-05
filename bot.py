@@ -2,7 +2,6 @@ import os
 import discord
 from discord.ext import commands
 from discord import app_commands
-
 from myserver import server_on
 
 bot = commands.Bot(command_prefix='!', intents=discord.Intents.all())
@@ -44,8 +43,7 @@ async def on_member_remove(member):
 async def on_message(message):
     if message.author == bot.user:
         return
-    mes = message.content
-    if mes == 'ฟา':
+    if message.content == 'ฟา':
         await message.channel.send("ฟาอ้วน")
     await bot.process_commands(message)
 
@@ -58,5 +56,4 @@ async def fa_command(interaction: discord.Interaction):
     await interaction.response.send_message('ฟาอ้วน')
 
 server_on()
-
 bot.run(os.getenv('TOKEN'))
